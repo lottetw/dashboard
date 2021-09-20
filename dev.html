@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系統設備</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	 <!--Facebook 分享時使用資訊  -->
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:url" content="" /> 
+	<meta property="og:image" content="" />
+	<meta property="og:type" content="website""/>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/vendors/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/vendors/vendors.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- favicon -->
+	<link rel="shortcut icon" size="16x16" href="favicon.ico">
+	<link rel="apple-touch-icon" sizes="192x192" href="favicon192.png">
+</head>
+<body>
+  <header>
+    <!-- load inc/nav.html -->
+  </header> 
+  <div class="vc-main-wrapper" data-simplebar>
+    <div class="container ">
+      <div class="row">
+        <div class="vc-brd-update ">
+          <a href="dev_add.html" class="btn vc-roundbtn"><i class="fa fa-plus"></i>新增</a>
+        </div>
+      </div>
+      <!-- widgets -->
+      <div class="row vc-mng-wgt-wrapper">
+        <!-- 系統設備 -->
+        <div class="vc-wgt mb-3">
+          <div class="vc-wgt-header">
+            <h2>系統設備</h2>
+          </div>
+          <div class="vc-wgt-body ">
+            <form id="" role="form" method="post" data-action="">
+              <div class="row mt-2 mb-2 mt-md-3 mb-md-3">
+                  <div class="col-12 col-md-6 vc-datatb-length-wrapper" id="">
+                      <span>顯示</span> 
+                      <div class="vc-datatb-length vc-roundbtn">
+                        <select class="custom-select">
+                          <option value="01" selected="">10</option>
+                          <option value="02">25</option>
+                          <option value="03">50</option>
+                          <option value="04">100</option>
+                        </select>
+                      </div>
+                      <span>項結果</span>
+                  </div>
+                  <div class="col-12 col-md-6 vc-datatb-search-wrapper vc-input-wrapper ">
+                    <span>搜尋:</span>
+                    <input type="text" class="vc-input vc-input-form" size="" placeholder="請輸入" id="">
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  
+                  <table class="table vc-data-table idTableDevice" id="" cellspacing="0" role="grid"
+                    aria-describedby="dataTable_info" >
+                    <thead>
+                      <tr >
+                        <th class="vc-col-name" >帳號名稱</th>
+                        <th class="vc-col-ip" >IP</th>
+                        <th class="vc-col-dev" >設備帳號</th>
+                        <th class="vc-col-opt vc-col-pc-only" >操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr  >
+                        <td class="vc-col-name">北區一</td>
+                        <td class="vc-col-ip" >220.168.15.1</td>
+                        <td class="vc-col-dev">N1</td>
+                        <td class="vc-col-opt vc-col-pc-only" >
+                          <a href="dev_edit.html" class="btn vc-squarebtn vc-mid vc-btnEDIT ">
+                            <i class="fa fa-pencil"></i>編輯
+                          </a>
+                          <a href="#" class="btn vc-squarebtn vc-mid vc-btnDEL " data-toggle="modal" data-target="#idDestroyModal" >
+                            <i class="fa fa-trash"></i>刪除
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="vc-mobile-only-option-parent">
+                        <td class="vc-mobile-only-option vc-col-opt " colspan="3">
+                          <a href="dev_edit.html" class="btn vc-squarebtn vc-mid vc-btnEDIT ">
+                            <i class="fa fa-pencil"></i>編輯
+                          </a>
+                          <a href="#" class="btn vc-squarebtn vc-mid vc-btnDEL " data-toggle="modal" data-target="#idDestroyModal">
+                            <i class="fa fa-trash"></i>刪除
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="vc-col-name">南區一</td>
+                        <td class="vc-col-ip">220.168.26.2</td>
+                        <td class="vc-col-dev">S1</td>
+                        <td class="vc-col-opt vc-col-pc-only">
+                          <a href="dev_edit.html" class="btn vc-squarebtn vc-mid vc-btnEDIT ">
+                            <i class="fa fa-pencil"></i>編輯
+                          </a>
+                          <a href="#" class="btn vc-squarebtn vc-mid vc-btnDEL " data-toggle="modal" data-target="#idDestroyModal">
+                            <i class="fa fa-trash"></i>刪除
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="vc-mobile-only-option-parent">
+                        <td class="vc-mobile-only-option vc-col-opt " colspan="3">
+                          <a href="dev_edit.html" class="btn vc-squarebtn vc-mid vc-btnEDIT ">
+                            <i class="fa fa-pencil"></i>編輯
+                          </a>
+                          <a href="#" class="btn vc-squarebtn vc-mid vc-btnDEL " data-toggle="modal" data-target="#idDestroyModal">
+                            <i class="fa fa-trash"></i>刪除
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="row mt-2 mt-md-3">
+                <div class="col-12 col-md-6">
+                  <div class="vc-datatb-pager-note" id="" role="status" aria-live="polite">顯示第 1 到 10 筆資料，共計 12 筆資料
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="vc-datatb-pager" id="">
+                    <ul class="pagination">
+                      <li class="paginate_button page-item previous disabled" id="">
+                        <a href="#" class="page-link"><i class="fa fa-angle-left"></i></a>
+                      </li>
+                      <li class="paginate_button page-item active">
+                        <a href="#"  class="page-link">1</a> </li>
+                      <li class="paginate_button page-item ">
+                        <a href="#" class="page-link">2</a> </li>
+                      <li class="paginate_button page-item next" id="dataTable_next">
+                        <a href="#" class="page-link"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Destroy Modal-->
+<div class="modal vc-modal vc-user-changepass-modal fade" id="idDestroyModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="">確認刪除?</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body ">
+        <p style="margin-top:30px;">點擊下方的"刪除"按鈕進行刪除。</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn vc-squarebtn vc-mid vc-btnNO" data-dismiss="modal">取消</button>
+        <button type="button" class="btn vc-squarebtn vc-mid vc-btnDEL" data-dismiss="modal">刪除</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/js/vendors/jquery-3.3.1.min.js"></script>
+<script src="assets/js/vendors/popper.min.js"></script>
+<script src="assets/js/vendors/bootstrap4.1.3.min.js"></script>
+<!-- daterangepicker -->
+<script src="assets/js/vendors/moment.min.js"></script>
+<script src="assets/js/vendors/daterangepicker.min.js"></script>
+<!-- select2 -->
+<script src="assets/js/vendors/select2.js"></script>
+<!-- simplebar -->
+<script src="assets/js/vendors/simplebar.min.js"></script>
+<!-- amchart -->
+<script src="//www.amcharts.com/lib/4/core.js"></script>
+<script src="//www.amcharts.com/lib/4/charts.js"></script>
+<script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="//www.amcharts.com/lib/4/themes/dark.js"></script>
+<script src="//www.amcharts.com/lib/4/maps.js"></script>
+<script src="//www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<!-- 個別js -->
+<script src="assets/js/index.js"></script>
+<script>
+    headerSetup("jsNavDevice");
+</script>
+</body>  
+</html>

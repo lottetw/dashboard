@@ -1,0 +1,30 @@
+[
+  {
+    "name": "LV3 (100以上)",
+    "color": "#7E5500",
+    "data": [
+      { "id": "US", "value": 199 },
+      { "id": "RU", "value": 154 },
+      { "id": "GB", "value": 121 },
+      { "id": "TW", "value": 101 }
+    ]
+  },
+  {
+    "name": "LV2 (50-100)",
+    "color": "#F79A00",
+    "data": [
+      { "id": "BR", "value": 76 },
+      { "id": "AR", "value": 68 },
+      { "id": "CN", "value": 55 }
+    ]
+  },
+  {
+    "name": "LV1 (50以下)",
+    "color": "#FFDC43",
+    "data": [
+      { "id": "IR", "value": 32 },
+      { "id": "IN", "value": 21 },
+      { "id": "AU", "value": 8 }
+    ]
+  }
+]

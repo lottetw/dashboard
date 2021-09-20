@@ -1,0 +1,27 @@
+[
+  {
+    "name": "LV3 (200以上)",
+    "color": "#7E5500",
+    "data": [
+      { "id": "AR", "value": 203 },
+      { "id": "JP", "value": 377 }
+      
+    ]
+  },
+  {
+    "name": "LV2 (100-200)",
+    "color": "#F79A00",
+    "data": [
+      { "id": "DK", "value": 199 },
+      { "id": "EG", "value": 155 },
+      { "id": "IS", "value": 121 }
+    ]
+  },
+  {
+    "name": "LV1 (100以下)",
+    "color": "#FFDC43",
+    "data": [
+      { "id": "US", "value": 57 }
+    ]
+  }
+]

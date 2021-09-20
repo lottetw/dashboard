@@ -1,0 +1,34 @@
+[
+  {
+    "category": "web-advertisements",
+    "value": 325
+  },
+  {
+    "category": "social-networking",
+    "value": 121
+  },
+  {
+    "category": "games",
+    "value": 43
+  },
+  {
+    "category": "computer-and-intern",
+    "value": 40
+  },
+  {
+    "category": "serch-engines",
+    "value": 36
+  },
+  {
+    "category": "streaming-media",
+    "value": 32
+  },
+  {
+    "category": "shopping",
+    "value": 23
+  },
+  {
+    "category": "business-and-economy",
+    "value": 18
+  }
+]

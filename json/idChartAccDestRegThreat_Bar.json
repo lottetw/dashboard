@@ -1,0 +1,42 @@
+[
+  {
+    "region": "United States",
+    "value": 199
+  },
+  {
+    "region": "Russia",
+    "value": 154
+  },
+  {
+    "region": "United Kingdom",
+    "value": 121
+  },
+  {
+    "region": "Taiwan",
+    "value": 101
+  },
+  {
+    "region": "Brazil",
+    "value": 76
+  },
+  {
+    "region": "Argentina",
+    "value": 68
+  },
+  {
+    "region": "China",
+    "value": 55
+  },
+  {
+    "region": "Iran",
+    "value": 32
+  },
+  {
+    "region": "India",
+    "value": 21
+  },
+  {
+    "region": "Australia",
+    "value": 8
+  }
+]

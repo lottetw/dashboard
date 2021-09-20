@@ -1,0 +1,107 @@
+
+
+$font_40px: 2.5rem //40px 
+$font_36px: 2.25rem //36px 
+$font_30px: 1.875rem //30px 
+$font_26px: 1.625rem //26px 
+$font_22px: 1.375rem //22px 
+$font_24px: 1.5rem //24px 
+$font_20px: 1.25rem //20px 
+$font_18px: 1.125rem //18px 
+$font_17px: 1.0625rem //17px
+$font_16px: 1rem   //16px
+$font_15px: 0.9375rem //15px 
+$font_14px: 0.875rem   //14px
+$font_13px: 0.8125rem //13px
+$font_12px: 0.75rem //12px
+$font_10px: 0.625rem //10px
+
+$c_gray_a90: rgba(200, 200, 200, 0.9)
+$c_white: #fff
+$c_white_a90: rgba(255, 255, 255, 0.9)
+$c_white_a75: rgba(255, 255, 255, 0.75)
+$c_white_a50: rgba(255, 255, 255, 0.5)
+$c_white_a40: rgba(255, 255, 255, 0.4)
+$c_white_a25: rgba(255, 255, 255, 0.25)
+$c_white_a10: rgba(255, 255, 255, 0.1)
+$c_white_a05: rgba(255, 255, 255, 0.05)
+$c_black_a10: rgba(0,0,0, 0.1)
+$c_black_a25: rgba(0,0,0, 0.25)
+$c_black_a50: rgba(0, 0, 0, 0.5)
+$c_black_a70: rgba(0, 0, 0, 0.7)
+$c_black: #000
+
+$amchart_h: 400px
+
+/* wgt */
+$c_txt_cyan: #41C1FF
+$c_txt_yellow: #FFD002  
+$c_txt_yellow_a50: rgba(255, 208, 2, 0.5)
+$c_txt_purple: #CC8CFF
+$c_txt_navyblue: #061b2e 
+$c_wgt_border: #3C528F
+$c_wgt_shadow: 0px 0px 3px #3C528F
+
+/* nav */
+$c_navlink_shadow: 0px 0px 3px rgba(255, 255, 255, 0.5)
+$c_purple: #CF94FF  
+$c_navlink_bdr: $c_white_a40
+/* subnav */
+$c_txt_navgray: #7C868F
+
+$nav_pc_h: 108px
+$nav_mobile_h: 60px  
+/* sidemenu */
+$c_sidemenu_bg: #061b2e 
+// $c_input_bg: rgba(6, 27, 46, 1)
+$c_input_form_bg: #0c263f
+
+$c_btn_bg_no: #aaa
+$c_btn_bg_yes: #216896
+$c_btn_bg_clr: #7B9438
+$c_btn_bg_del: #9F55FF
+$c_btn_shadow: 0px 0px 3px rgba(255, 255, 255, 1)
+/* chart */ 
+
+$c_chart_bg: #123F72
+$c_chart_fg1: #43C7FF
+$c_chart_fg2: #8271FF
+$c_donut_hole: #0C1527
+$c_chartbtn_bg: #091C2D
+$c_chartbtn_bg_hover: #4F4F4F
+
+/* table */
+$c_wgtacc_bg: rgba(9, 28, 45, 0.5)
+$c_table_bg: #091C2D
+$c_table_even_bg: #152737
+
+/* popup */
+$c_popup_bg_gray: #CFD7DD
+$c_popup_border: #7C868F
+$c_hover_purple_1: #CD8EFF
+$c_hover_purple_2: #9F55FF
+
+$min_page_h: 100vh
+
+ 
+
+@mixin transition($transition...)
+    -moz-transition: $transition
+    -o-transition: $transition
+    -webkit-transition: $transition
+    transition: $transition    
+@mixin transform($transform...)
+    -moz-transform: $transform
+    -o-transform: $transform
+    -webkit-transform: $transform
+    transform: $transform 
+@mixin transform-origin($transform-origin)
+    -moz-transform-origin: $transform-origin
+    -o-transform-origin: $transform-origin
+    -webkit-transform-origin: $transform-origin
+    transform-origin: $transform-origin
+@mixin linear-gradient($direction, $list) 
+    background: -webkit-linear-gradient($direction, $list)
+    background: -moz-linear-gradient($direction, $list)
+    background: -o-linear-gradient($direction, $list)
+    background: linear-gradient($direction, $list)

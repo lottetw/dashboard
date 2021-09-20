@@ -1,0 +1,30 @@
+[
+  {
+    "category": "networking",
+    "value": 270
+  },
+  {
+    "category": "general-internet",
+    "value": 145
+  },
+  {
+    "category": "business-system",
+    "value": 110
+  },
+  {
+    "category": "unknown",
+    "value": 79
+  },
+  {
+    "category": "internal",
+    "value": 55
+  },
+  {
+    "category": "media",
+    "value": 21
+  },
+  {
+    "category": "collaboration",
+    "value": 10
+  }
+]

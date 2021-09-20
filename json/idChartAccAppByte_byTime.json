@@ -1,0 +1,32 @@
+[
+  {
+    "time": "2019/08/06",
+    "bytes_sent": 50,
+    "bytes_receive": 20
+  },
+  {
+    "time": "2019/08/07",
+    "bytes_sent": 80,
+    "bytes_receive": 20
+  },
+  {
+    "time": "2019/08/08",
+    "bytes_sent": 40,
+    "bytes_receive": 100
+  },
+  {
+    "time": "2019/08/09",
+    "bytes_sent": 150,
+    "bytes_receive": 80
+  },
+  {
+    "time": "2019/08/10",
+    "bytes_sent": 100,
+    "bytes_receive": 50
+  },
+  {
+    "time": "2019/08/11",
+    "bytes_sent": 280,
+    "bytes_receive": 180
+  } 
+]

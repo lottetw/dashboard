@@ -1,0 +1,32 @@
+[
+  {
+    "time": "2019/08/06",
+    "vulnerability": 50,
+    "spyware": 100
+  },
+  {
+    "time": "2019/08/07",
+    "vulnerability": 80,
+    "spyware": 80
+  },
+  {
+    "time": "2019/08/08",
+    "vulnerability": 40,
+    "spyware": 180
+  },
+  {
+    "time": "2019/08/09",
+    "vulnerability": 150,
+    "spyware": 250
+  },
+  {
+    "time": "2019/08/10",
+    "vulnerability": 100,
+    "spyware": 220
+  },
+  {
+    "time": "2019/08/11",
+    "vulnerability": 280,
+    "spyware": 210
+  }
+]

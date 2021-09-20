@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登入畫面</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	 <!--Facebook 分享時使用資訊  -->
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:url" content="" /> 
+	<meta property="og:image" content="" />
+	<meta property="og:type" content="website""/>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/vendors/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/vendors/vendors.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- favicon -->
+	<link rel="shortcut icon" size="16x16" href="favicon.ico">
+	<link rel="apple-touch-icon" sizes="192x192" href="favicon192.png">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg vc-navbar">
+      <div class="container">
+        <a class="navbar-brand vc-navlogo" href="login.html"> <img src="assets/img/logo_PA.svg" alt="logo"> </a>
+      </div>
+    </nav>
+  </header> 
+  <div class="vc-main-wrapper" data-simplebar>
+    <div class="container ">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+          <div class="card vc-login-card o-hidden shadow-lg my-4">
+            <div class="card-header vc-card-header text-center mb-2"><h2>使用者登入</h2></div>
+            <div class="card-body ">
+              <form method="post" action="">
+                <div class="form-group row">
+                  <label for="idUsername" class="col-md-4 col-form-label text-md-right">Username</label>
+                  <div class="col-md-6">
+                    <input id="idUsername" type="text" class="form-control vc-input vc-input-form " name="username" value="" autocomplete="username"
+                      autofocus="">
+                    <span class="invalid-feedback " id="idUsernameTxt" role="alert"> 使用者名稱或密碼錯誤</span>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="idPassword" class="col-md-4 col-form-label text-md-right">密碼</label>
+                  <div class="col-md-6">
+                    <input id="idPassword" type="password" class="form-control vc-input vc-input-form " name="password" autocomplete="current-password">
+                    <span class="invalid-feedback " id="idPasswordTxt" role="alert"> 密碼不能留空</span>
+                  </div>
+                </div>
+                <div class="form-group row mb-0">
+                  <div class="col-md-6 offset-md-4">
+                    <div class="vc-edit-btn-wrapper mt-3 ">
+                      <!-- <button type="submit" class="btn vc-squarebtn vc-btnYES" onclick="location.href=''">
+                      </button> -->
+                      <a href="index.html" class="btn vc-squarebtn vc-btnYES ">
+                        <i class="fa fa-sign-in"></i>
+                        登入
+                      </a>
+
+                      <a id="idTestLink" style="display:block; width:100%;margin:1rem auto 0 auto;font-size:12px;text-decoration:underline;text-align:center;">
+                        (測試用：點此看錯誤訊息顯示)</a>
+                      <a id="idTestLink2"
+                        style="display:block; width:100%;margin:1rem auto 0 auto;font-size:12px;text-decoration:underline;text-align:center;">
+                        (測試用：點此拿掉錯誤訊息顯示)</a>
+                      <a id="idTestLink3"
+                        style="display:block; width:100%;margin:1rem auto 0 auto;font-size:12px;text-decoration:underline;text-align:center;">
+                        (測試用：點此看加註解顯示)</a>
+                      <script>
+                        document.getElementById("idTestLink").addEventListener('click', showInvalid, false);
+                        function showInvalid() {
+                          document.getElementById("idUsername").classList.add("is-invalid");
+                          document.getElementById("idUsernameTxt").classList.add("is-invalid");
+                          document.getElementById("idPassword").classList.add("is-invalid");
+                          document.getElementById("idPasswordTxt").classList.add("is-invalid");
+                        }
+                        document.getElementById("idTestLink2").addEventListener('click', removeInvalid, false);
+                        function removeInvalid() {
+                          document.getElementById("idUsername").classList.remove("is-invalid");
+                          document.getElementById("idUsernameTxt").classList.remove("is-invalid");
+                          document.getElementById("idPassword").classList.remove("is-invalid");
+                          document.getElementById("idPasswordTxt").classList.remove("is-invalid");
+                        }
+                        document.getElementById("idTestLink3").addEventListener('click', addNote, false);
+                        function addNote() {
+                          removeInvalid();
+                          document.getElementById("idUsernameTxt").classList.add("justnote");
+                          document.getElementById("idPasswordTxt").classList.add("justnote");
+                        }
+                      </script>
+
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<div class="modal vc-modal vc-user-changepass-modal fade" id="idModalUserChangePass" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="">修改會員密碼</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body ">
+        <label>舊密碼</label>
+        <div class="form-group pass_show jsPassShow">
+          <input type="password" value="" class="form-control" placeholder="請輸入原始密碼">
+          <span class="jsPassIcon vc-passshow"></span>
+        </div>
+        <label>新密碼</label>
+        <div class="form-group pass_show jsPassShow">
+          <input type="password" value="" class="form-control" placeholder="8-12碼，至少包含OOXXZZ">
+          <span class="jsPassIcon vc-passshow"></span>
+        </div>
+        <label>請再輸入一次新密碼</label>
+        <div class="form-group pass_show jsPassShow">
+          <input type="password" value="" class="form-control" placeholder="">
+          <span class="jsPassIcon vc-passshow"></span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn vc-squarebtn vc-mid vc-btnNO" data-dismiss="modal">取消</button>
+        <button type="button" class="btn vc-squarebtn vc-mid vc-btnYES" data-dismiss="modal">確定更改</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/js/vendors/jquery-3.3.1.min.js"></script>
+<script src="assets/js/vendors/popper.min.js"></script>
+<script src="assets/js/vendors/bootstrap4.1.3.min.js"></script>
+<!-- daterangepicker -->
+<script src="assets/js/vendors/moment.min.js"></script>
+<script src="assets/js/vendors/daterangepicker.min.js"></script>
+<!-- select2 -->
+<script src="assets/js/vendors/select2.js"></script>
+<!-- simplebar -->
+<script src="assets/js/vendors/simplebar.min.js"></script>
+<!-- amchart -->
+<script src="//www.amcharts.com/lib/4/core.js"></script>
+<script src="//www.amcharts.com/lib/4/charts.js"></script>
+<script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="//www.amcharts.com/lib/4/themes/dark.js"></script>
+<script src="//www.amcharts.com/lib/4/maps.js"></script>
+<script src="//www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<!-- 個別js -->
+<!-- <script src="assets/js/index.js"></script>
+<script src="assets/js/brd_chart.js"></script> -->
+
+</body>  
+</html>

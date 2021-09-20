@@ -1,0 +1,1974 @@
+@import _variable
+/* file: _mymain */
+/* ============================================================ */
+/*                      general                                 */
+/* ============================================================ */
+body,
+html
+  font-family: "Open Sans", "Microsoft JhengHei", sans-serif
+  line-height: 1.2
+  letter-spacing: 0.5px
+  font-size: $font_16px
+  word-break: break-all
+  color: $c_white
+  height: 100%
+  overflow-y: hidden
+p
+  font-size: $font_16px
+  margin: .5rem 0
+  line-height: 1.2
+  color: $c_white
+ul,
+ol
+  list-style: none
+  margin: 0
+  padding: 0
+a
+  color: inherit
+  text-decoration: none
+  &:hover
+    text-decoration: none
+    color: inherit
+*:focus, button:focus, .btn:focus
+  outline: 0
+  box-shadow: none
+*
+  box-sizing: border-box
+
+input.vc-input
+  color: $c_white
+  font-weight: normal
+  background-color: $c_sidemenu_bg
+  border: 0
+  border-bottom: 1px solid $c_white_a50
+  padding: .5rem .5rem .5rem .5rem
+  width: 100%
+.vc-input::placeholder
+  color:  $c_white_a50
+input.vc-input-form 
+  background-color: transparent
+  background-color: $c_input_form_bg
+  border: 1px solid $c_white_a50
+  border-radius: .25rem
+input[type="search"]::-webkit-search-cancel-button
+  -webkit-appearance: searchfield-cancel-button
+a.show-link
+  color: $c_txt_yellow
+  &:hover
+    text-decoration: underline
+.txt-hlight
+  color: $c_txt_yellow
+ 
+/* ============================================================ */
+/*                      element	                                */
+/* ============================================================ */
+.fa
+  color: $c_white 
+.vc-roundbtn, .vc-squarebtn
+  height: 2.2rem
+  padding-left: 1rem
+  padding-right: 1rem
+  background: transparent
+  color: $c_white
+  border-radius: 1.5rem
+  border: 1px solid $c_navlink_bdr  
+  i.fa
+    width: .8rem
+    margin-right: .5rem
+  &:hover
+    box-shadow: $c_wgt_shadow
+    @include linear-gradient(top, ($c_wgt_border 0%, #0C1527 100%)) 
+    color: $c_white
+.vc-icon-back
+  i.fa
+    margin-left: .25rem 
+    margin-right: 0
+.vc-roundbtn.vc-small, .vc-squarebtn.vc-small
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: $font_12px
+  padding: .25rem .5rem
+  height: auto    
+  i.fa
+    font-size: $font_14px
+    margin-bottom: 2px
+.vc-roundbtn.vc-small
+  min-width: 5rem
+.vc-roundbtn.vc-mid, .vc-squarebtn.vc-mid
+  font-size: $font_14px  
+.vc-squarebtn
+  border-radius: 0
+  min-width: 4.25rem
+  height: auto
+  margin: 2px 2px
+.idAccFilterEditBtn.vc-mode-filteredit
+  opacity: 0.2
+.vc-btnNO
+  color: $c_white
+  background-color: $c_btn_bg_no
+  border: 1px solid $c_btn_bg_no
+  &:hover
+    background: #747474
+.vc-btnYES, .vc-btnEDIT
+  color: $c_white
+  background-color: $c_btn_bg_yes
+  border: 1px solid $c_btn_bg_yes
+  &:hover
+    background: #0D4970
+.vc-btnDEL
+  color: $c_white
+  background-color: $c_btn_bg_del
+  border: 1px solid $c_btn_bg_del
+  &:hover
+    background: #7313C7
+.vc-btnCLR
+  color: $c_white
+  background-color: $c_btn_bg_clr
+  border: 1px solid $c_btn_bg_clr
+  &:hover
+    background: #647E1D    
+.vc-btnNO:hover, .vc-btnYES:hover, .vc-btnEDIT:hover, .vc-btnDEL:hover, .vc-btnCLR:hover
+  border: 1px solid $c_navlink_bdr
+  box-shadow: $c_btn_shadow
+  transision: .5s
+/* form */  
+.form-control.is-invalid
+  border-color: #CC8CFF
+  padding-right: calc(1.5em + .75rem)
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23CC8CFF' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23CC8CFF' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E")
+  background-repeat: no-repeat
+  background-position: center right calc(.375em + .1875rem)
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem)
+
+.vc-main-wrapper  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active
+    -webkit-box-shadow: 0 0 0 30px $c_input_form_bg inset !important
+    // background-color: $c_sidemenu_bg !important
+    -webkit-text-fill-color: $c_white !important
+  .form-control:focus
+    color: $c_white
+    background-color: inherit
+    border-color: $c_txt_cyan
+    box-shadow: $c_navlink_shadow 
+  .invalid-feedback
+    font-weight: normal
+    color: #e0baff
+  .invalid-feedback.justnote
+    color: $c_white
+.custom-control-inline
+  margin-top: .5rem
+.custom-control-label::before, .custom-control-label::after
+  top: 0
+  left: -1.5rem
+.custom-radio .custom-control-input:checked~.custom-control-label::before
+  background-color: $c_hover_purple_2
+.custom-control
+  padding-left: 1.75rem
+/* login */  
+.card.vc-login-card
+  border-radius: 0
+  background: transparent
+  .vc-card-header
+    border: 0
+  .card-body
+    @include linear-gradient(top, ($c_black_a10 0%, #1E3056 50%, $c_black_a10 100%))
+    border: 1px solid $c_wgt_border
+    box-shadow: $c_wgt_shadow
+    padding-top: 2.5rem
+    padding-bottom: 2.5rem
+.invalid-feedback
+  display: none
+.invalid-feedback.is-invalid
+  display: block  
+.invalid-feedback.justnote
+  display: block
+  font-size: $font_14px
+
+/* ============================================================ */
+/*                      modal	                                */
+/* ============================================================ */ 
+.modal-footer
+  justify-content: center   
+.vc-modal
+  .modal-content
+    background-color: #eee
+    border-radius: 0
+    p, h5
+      color: $c_black
+    p
+      text-align: center
+  .modal-dialog
+    margin: 10vh auto 0 auto
+    width: 80%
+    max-width: 380px
+
+.vc-modal
+  .modal-footer
+    .btn
+      margin: 0 1%
+      width: 48%    
+
+
+/* ============================================================ */
+/*                      layout                                  */
+/* ============================================================ */
+@media only screen and  (min-width: 1200px)
+  .container
+    max-width: 1360px
+body    
+  background-image: url(../img/bg.jpg)
+  background-size: cover
+  background-position: center
+.vc-navbar
+  position: fixed
+  width: 100%  
+  top: 0
+  left: 0
+  z-index: 9
+.vc-main-wrapper, .vc-acc-wrapper
+  width: 100%
+  height: calc(100% - 108px)
+  margin-top: $nav_pc_h  
+  overflow-y: auto
+.vc-main-wrapper
+  padding: 0rem 2rem  
+.vc-footer
+  width: 100%
+  text-align: center
+  padding: 1.5rem 2rem
+  p
+    font-size: $font_14px
+    color: #6E6E6E
+
+$acc_sidemenu_w: 304px  
+.vc-acc-wrapper
+  position: relative
+.vc-sidemenu-wrapper
+  position: fixed
+  z-index: 3
+  left: 0
+  top: $nav_pc_h
+  height: calc(100% - 108px)
+  @include transform(translateX(0px))
+  transition: .5s
+  width: $acc_sidemenu_w
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  .vc-sidemenu
+    width: 280px
+    height: 100%
+    border-right: 1px solid $c_white_a50
+    align-self: stretch
+    background-color: $c_sidemenu_bg
+  .vc-sidemenu-toggle
+    width: 24px    
+    height: 48px
+    border: 1px solid $c_white_a25
+    background-color: $c_sidemenu_bg
+    box-shadow: $c_navlink_shadow
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    & .fa
+      font-size: $font_20px
+.vc-acc-main-wrapper
+  height: 100%
+  position: absolute
+  z-index: 1
+  left: 0
+  right: 0  
+  padding-left: 1rem
+  padding-right: 1rem
+  margin-left: 280px
+  width: calc(100% - 280px)
+  transition: .5s
+.vc-sidemenu-wrapper.vc-mode-sidehide
+  @include transform(translateX(-280px))
+  transition: .5s
+  .fa-angle-left
+    transition: .5s
+    @include transform(scaleX(-1))
+.vc-acc-main-wrapper.vc-mode-sidehide
+  margin-left: 24px
+  width: calc(100% - 24px)
+  transition: .5s
+.vc-acc-main-wrapper:before
+  position: absolute
+  z-index: 2    
+  width: 0
+  height: 100%
+  left: 0
+  top: 0
+  content: ""
+  background-color: transparent  
+@media only screen and  (max-width: 992px)
+  .vc-main-wrapper, .vc-acc-wrapper
+    height: calc(100% - 60px)
+    margin-top: $nav_mobile_h
+  .vc-main-wrapper
+    padding: 0rem .5rem
+  .vc-footer
+    padding: 1rem .5rem  
+  .vc-sidemenu-wrapper
+    top: $nav_mobile_h
+    height: calc(100% - 60px)
+  .vc-acc-main-wrapper, .vc-acc-main-wrapper.vc-mode-sidehide  
+    margin-left: 0
+    width: 100%
+  .vc-acc-wrapper.vc-mode-sidehide
+    overflow-y: auto
+  .vc-acc-wrapper
+    overflow-y: hidden
+  .vc-acc-main-wrapper:before
+    width: 100%
+    @include linear-gradient(top, ($c_white_a25 0%, transparent 100%)) 
+    
+  .vc-acc-main-wrapper.vc-mode-sidehide:before
+    width: 0
+    background-color: transparent
+  .vc-acc-main-wrapper  
+    .col-lg-6
+      padding-left: 10px
+      padding-right: 0
+  .vc-brd-wgt-wrapper
+    .col-lg-7, .col-lg-5
+      padding-left: 5px
+      padding-right: 5px
+
+@media only screen and  (max-width: 576px)
+  .vc-acc-main-wrapper
+    padding-left: 5px
+    padding-right: 5px
+    .container-fluid
+      padding-left: 0
+      padding-right: 0
+    .row
+      margin-left: 0
+      margin-right: 0
+      .col-lg-6, .col-lg-12
+        padding-left: 0
+        padding-right: 0
+        .vc-wgt-header
+          padding-left: .5rem
+        .vc-wgt-body-acc
+          border: 0
+          border-top: 1px solid $c_wgt_border
+          padding-left: 0
+          padding-right: 0
+
+
+/* ============================================================ */
+/*                      menu                                    */
+/* ============================================================ */
+.vc-navbar
+  padding-top: 1.5rem
+  padding-bottom: 1.5rem
+  background-color: $c_black
+  .navbar-toggler  
+    border: 0
+  .navbar-toggler-icon
+    background: url("../img/nav-tg.svg") no-repeat center center 
+    background-size: 30px 30px
+.vc-navlogo
+  padding-right: 80px
+  img
+    width: 140px
+    height: auto
+@media only screen and  (max-width: 1200px)
+  .vc-navlogo
+    padding-right: 0px  
+$nav_link_pleft: .75rem
+$nav_link_pright: 1rem
+.vc-navmenu
+  a.nav-link
+    margin: 0 .5rem
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid $c_navlink_bdr
+    box-shadow: $c_navlink_shadow
+    background-color: $c_black
+    color: $c_white
+    img
+      margin-right: .25rem
+  a.nav-link.active, a.nav-link:hover, a.nav-link.active:hover
+    @include linear-gradient(top, ($c_hover_purple_1 0%, $c_hover_purple_2 100%))
+  a.nav-link:hover, a.nav-link.active:hover
+    transition: 0.5s
+.vc-navmenu
+  a.nav-link
+    padding-left: $nav_link_pleft
+    padding-right: $nav_link_pright
+
+/* user box */
+$userbox_w: 200px
+$p_username_w: 160px 
+.vc-userbox
+  .dropdown-toggle
+    text-align: left
+    font-size: 14px
+    letter-spacing: 1px
+    border-radius: 0
+    background: transparent
+    color: $c_white
+    border: 0
+    border-bottom: 1px solid $c_purple
+    &:after
+      color: $c_white
+  .dropdown-toggle
+    p
+      font-size: inherit
+      max-width: $p_username_w
+      overflow: hidden
+      display: inline-block
+      margin-bottom: 0
+      margin-top: 0
+  .dropdown-toggle, .dropdown-menu
+    width: $userbox_w
+.vc-userbox, .vc-mobile-only-thead-menu
+  .dropdown-toggle    
+    &:after
+      font-family: FontAwesome
+      font-size: $font_14px
+      width: 10px
+      height: 10px
+      content: "\f107" //.fa-angle-down
+      border: 0 
+
+.dropdown-menu
+  border-radius: 0
+  left: auto
+  right: 0
+  opacity: 0
+  transition: .5s
+  display: block
+  height: 1px
+  padding-top: 0
+  padding-bottom: 0
+  background-color: $c_popup_bg_gray
+  background-color: $c_white_a90
+  border: 1px solid $c_popup_border
+  border: 0
+  .dropdown-item
+    display: none
+// .dropdown:hover .dropdown-menu,    
+.dropdown-menu.show 
+  padding-top: .25rem
+  padding-bottom: .25rem
+  z-index: 1000
+  display: block
+  height: auto
+  opacity: 1
+  transition: .5s   
+  .dropdown-item:hover, .dropdown-item.active
+    color: $c_white
+    @include linear-gradient(top, ($c_hover_purple_1 0%, $c_hover_purple_2 100%))  
+  .dropdown-item
+    display: block
+    padding: .5rem 1rem
+    color: $c_black
+    font-weight: 500    
+
+/* RWD MENU */    
+@media only screen and  (max-width: 992px)
+  .vc-navbar
+    padding-top: 0
+    padding-bottom: 0
+  .vc-navmenu
+    a.nav-link
+      justify-content: flex-start
+      box-shadow: none
+      border: 0
+  .navbar-collapse
+    margin-bottom: 20px
+  .vc-userbox
+    position: static
+    padding: .5rem
+    .dropdown-toggle
+      width: 100%
+      text-align: left
+    .dropdown-menu
+      position: static
+      top: 0
+      float: left
+      left: auto
+      right: auto
+      width: 100%
+      display: none
+    .dropdown-menu.show
+      display: block
+
+/* Modal: user change password*/      
+.vc-modal
+  .modal-body
+    min-height: 100px
+  
+.vc-user-changepass-modal
+  .modal-body
+    padding-top: 0
+    padding-bottom: 0   
+  .modal-footer
+    padding-top: .5rem     
+  label
+    font-size: $font_14px
+    color: $c_txt_navyblue
+  .pass_show
+    position: relative
+  .vc-passshow, .vc-passhide
+    display: inline-block
+    position: absolute
+    z-index: 1
+    top: 10px
+    right: 16px
+    &:after
+      display: block
+      font-family: FontAwesome
+      font-size: $font_16px
+      color: $c_txt_cyan
+      cursor: pointer
+  .vc-passshow:after 
+    content: "\f06e" //fa-eye
+  .vc-passhide:after
+    content: "\f023" //fa-lock
+
+/* ============================================================ */
+/*                      wgt                                     */
+/* ============================================================ */
+.vc-wgt
+  width: 100%  
+.vc-wgt-header, .vc-card-header
+  padding: .75rem 0
+  h2
+    font-size: $font_20px
+    letter-spacing: 1px
+    font-weight: 500
+    color: $c_txt_cyan
+    margin-bottom: 0
+    line-height: 1
+.vc-wgt-body    
+  padding-bottom: 0
+  border: 1px solid $c_wgt_border
+.vc-nobdr
+  border: 0   
+/* ============================================================ */
+/*                      board                                    */
+/* ============================================================ */
+/* update tool */
+.vc-brd-update
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  & > .vc-roundbtn
+    min-width: 6rem
+  margin-left: auto
+  margin-top: 1rem
+.custom-select 
+  background: transparent
+  color: $c_white
+  border: 0
+  cursor: pointer
+  padding-right: 1rem
+  option
+    color: $c_black
+  &:focus
+    outline: 0
+    box-shadow: none  
+   
+.vc-updatetime, .vc-datetimerange, .vc-datatb-length
+  display: flex
+  align-items: center
+  position: relative
+  img
+    width: 1rem
+    height: auto
+    margin: .25rem 0rem .25rem 0rem
+  &:after
+    position: absolute
+    top: .5rem
+    right: 1.5rem
+    z-index: 2
+    display: block
+    font-family: FontAwesome
+    font-size: $font_14px
+    width: 2px
+    height: 14px
+    content: "\f107" //.fa-angle-down
+    color: $c_white
+
+/* wgt:notice */
+.vc-notice-ul
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+.vc-notice-li
+  width: 32%
+  margin: 0 1%
+  border: 1px solid $c_wgt_border
+  box-shadow: $c_wgt_shadow
+  position: relative
+  @include linear-gradient(top, ($c_wgt_border 0%, #0C1527 100%))  
+  &:after
+    content: ""
+    display: block
+    padding-bottom: 85%
+  &:nth-child(1)
+    margin-left: 0
+  &:last-child  
+    margin-right: 0
+
+
+
+.vc-nt-content
+  position: absolute
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  img
+    width: 40px
+    height: auto
+  .vc-nt-title
+    font-size: $font_16px
+  .vc-nt-count
+    font-weight: 600
+    font-size: $font_40px  
+    line-height: 1
+    margin-top: 0
+@media only screen and  (max-width: 576px)
+  .vc-nt-content
+    img
+      width: 24px
+      height: auto
+    .vc-nt-title
+      font-size: $font_12px
+      margin-top: 5px
+      margin-bottom: 5px
+    .vc-nt-count
+      font-weight: normal
+      font-size: $font_16px      
+/* wgt:urltop */    
+.vc-urltop-ul
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex-wrap: wrap
+  margin-right: .25rem
+.vc-urltop-li  
+  display: flex
+  justify-content: flex-start
+  width: 50%
+  margin: 0
+  .vc-col-donut
+    margin: .5rem
+  .vc-col-info
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    .vc-row-star
+      // paddging-left: 10%
+      text-align: center
+      width: 90%
+@media only screen and  (max-width: 576px) 
+  .vc-urltop-li
+    width: 100%
+/* urltop element */    
+.vc-urllink
+  font-size: $font_14px
+  color: $c_txt_yellow
+  max-height: 2rem
+  overflow: hidden
+  &:hover
+    color: $c_txt_yellow
+    text-decoration: underline
+/* ----  svg donut ----- */
+.vc-svg-donut  
+  width: 120px
+  height: 120px
+  margin: 0 auto
+.vc-donut-ring  
+  stroke: $c_chart_bg
+  fill: transparent
+.vc-donut-segment
+  transform-origin: center
+  stroke-dashoffset: 25
+  fill: transparent
+.vc-donut-ring, .vc-donut-segment
+  stroke-width: 3.5
+.vc-donut-hole
+  fill: $c_donut_hole 
+.vc-donut-run
+  animation: donutrun 4s  
+@keyframes donutrun
+  0%
+    stroke-dasharray: 0 100
+
+
+.vc-svg-donut 
+  position: relative
+.vc-donut-text
+  letter-spacing: 0
+  position: absolute
+  z-index: 1
+  top: 30px
+  left: 0
+  width: 100%
+  display: block
+  & > p
+    margin: 0
+    width: 100%
+    text-align: center
+    display: block
+  .vc-label-data    
+    margin: 0px 0 3px 0
+.vc-label-data
+  color: $c_white
+  font-size: $font_22px
+.vc-label
+  color: $c_white
+  font-size: $font_14px
+.vc-label-percent
+  color: $c_txt_purple
+  font-size: $font_14px
+/* wgt:apptop */   
+.vc-wgt-body  
+  overflow-x: auto
+.vc-apptop-ul
+  display: table
+  width: 96%
+  margin: 1rem 2%
+  min-width: 480px
+.vc-apptop-li  
+  display: table-row
+  & > *
+    display: table-cell
+    padding: .25rem .5rem
+  .vc-col-star
+    width: 10%
+    text-align: center
+    vertical-align: middle
+  .vc-col-name 
+    width: 30%
+    & > *
+      display: flex
+      flex-direction: column
+      margin: 0
+      width: 100%
+    .vc-value
+      margin-top: .25rem   
+  .vc-col-perc
+    width: 30%
+.vc-col-perc  
+  & > *
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+  .vc-perc-bg, .vc-value
+    margin-top: .5rem 
+  .vc-value
+    text-align: right
+.vc-apptop-header           
+  .vc-title
+    font-size: $font_14px
+    color: $c_white
+    text-align: center
+    margin: 0
+/* apptop element */    
+.vc-star
+  display: inline-block
+  width: 48px
+  height: 48px
+  line-height: 48px
+  padding-top: 2px
+  background: url(../img/brd-star4@2x.png) no-repeat center center
+  background-size: 48px 48px
+  text-align: center
+  font-size: $font_20px
+  color: $c_white
+  text-shadow: 0 0 4px $c_black_a50
+
+.vc-star.vc-star1
+  background-image: url(../img/brd-star1@2x.png) 
+.vc-star.vc-star2
+  background-image: url(../img/brd-star2@2x.png)
+.vc-star.vc-star3
+  background-image: url(../img/brd-star3@2x.png)   
+@media only screen and  (max-width: 576px) 
+  .vc-star
+    width: 30px
+    height: 30px
+    line-height: 30px
+    background-size: 30px 30px
+    font-size: $font_16px
+  .vc-apptop-li 
+    .vc-col-star    
+      width: 5%
+    .vc-col-name
+      width: 35%
+.vc-name
+  font-size: $font_16px
+  color: $c_txt_purple
+  max-height: 1.2rem
+  overflow: hidden 
+.vc-value
+  font-size: $font_14px
+  color: $c_white
+.vc-value.vc-withbullet
+  background: url(../img/brd-bullet.svg) no-repeat left center
+  background-size: 5px 5px
+  padding-left: 10px
+  max-height: 2rem
+  overflow: hidden
+.vc-perc-bg, .vc-perc-bar
+  display: inline-block
+  height: 20px
+  border-radius: 10px
+.vc-perc-bg
+  display: flex
+  overflow: hidden
+  width: 100%
+  background-color: $c_chart_bg
+  margin-bottom: .25rem  
+.vc-perc-bar
+  display: flex
+  flex-direction: column
+  @include linear-gradient(left, ($c_chart_fg1 0%, $c_chart_fg2 100%)) 
+.vc-bar-run
+  animation: barrun 4s  
+@keyframes barrun
+  0%
+    width: 0  
+
+.vc-wgt-body-session
+  height: 100px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 30px
+  margin-bottom: .75rem
+  & > *
+    border: 1px solid rgba(255,255,0,0)
+  .vc-icon
+    img
+      width: 40px
+      height: auto
+  .vc-txt
+    width: 200px
+    & > *
+      display: inline-block
+      border: 1px solid rgba(255,255,0,0)
+  .vc-name
+    margin-bottom: 0
+    width: 100%
+  .vc-counter-decipoint
+    font-size: $font_36px
+    width: 130px
+  .vc-value
+    width: calc(100% - 136px)
+    margin-left: -5px
+@media only screen and  (max-width: 375px) 
+  .vc-wgt-body-session
+    padding: 0 10px 0 20px
+/* ============================================================ */
+/*                      ACC                                 */
+/* ============================================================ */
+/* sidemenu */
+.vc-sidewgt
+  margin: .5rem .75rem
+.vc-sidewgt-header
+  h3
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $c_txt_cyan
+    font-size: $font_16px
+    .fa
+      color: $c_txt_cyan
+      margin: 0 .25rem
+.vc-sidewgt-body
+  padding: .5rem 0
+/* date range picker */   
+    
+.vc-datetimerange
+  input
+    background-color: transparent
+    color: $c_white
+    border: 0
+    width: 100%
+    height: 100%
+    font-weight: normal
+    font-size: $font_12px
+  &:after
+    right: 1rem
+.vc-datetimerange.vc-roundbtn
+  padding-left: .5rem
+  padding-right: 1.2rem
+@media only screen and (max-width: 576px)   
+  .vc-datetimerange.vc-roundbtn
+    padding-left: .25rem
+    padding-right: .25rem
+.vc-date-result  
+  font-size: $font_13px
+  line-height: 1.2
+  padding-left: .5rem
+  span
+    font-size: $font_16px
+/* 修改date range picker 日曆內部樣式 */    
+.daterangepicker .drp-buttons .btn
+  font-size: $font_14px  
+.daterangepicker
+  font-family: inherit
+  color: $c_black
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td
+  font-size: $font_14px
+  // width: 2.5rem
+  // height: 2rem
+.daterangepicker td.active, .daterangepicker td.active:hover
+  background-color: $c_btn_bg_yes
+.daterangepicker th.month
+  color: $c_btn_bg_yes
+  font-size: $font_14px
+  font-weight: bold
+.daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span
+  color: $c_btn_bg_yes
+/* 修改date range picker 日曆內部樣式: 年、月下拉選單樣式 */  
+.daterangepicker select.monthselect, .daterangepicker select.yearselect,
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.ampmselect  
+  font-size: $font_14px
+  vertical-align: middle
+  padding: .1rem
+  height: 2rem
+  border: 1px solid #cccccc
+  border-radius: 0
+.daterangepicker select.monthselect, .daterangepicker select.yearselect
+  width: 50%
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect 
+  width: 25%
+.daterangepicker.openscenter:after, .daterangepicker.openscenter:before
+  margin: 0
+  left: 115px
+
+/* 修改date range picker 日曆內部樣式: 取消/完成 btn在手機尺寸的排版*/
+@media only screen and (max-width: 576px)
+  .daterangepicker
+    max-height: 70vh
+    overflow-y: auto
+  .daterangepicker .drp-selected
+    display: block
+  .daterangepicker .drp-buttons    
+    padding-bottom: 30px
+
+/* simplebar- customized scroll bar */
+.simplebar-scrollbar:before, .simplebar-scrollbar.simplebar-visible:before
+  background-color: $c_txt_purple
+  opacity: 1  
+.simplebar-track.simplebar-vertical
+  background-image: url('../img/scrollbar_bg.svg')
+  background-position: center center
+  background-repeat: repeat-y
+.simplebar-track.simplebar-horizontal
+  background-image: url('../img/scrollbarH_bg.svg')
+  background-position: center center
+  background-repeat: repeat-x
+.vc-main-wrapper, .vc-acc-main-wrapper
+  .simplebar-track.simplebar-vertical
+    margin-right: 10px
+@media only screen and (max-width: 990px)
+  .vc-main-wrapper, .vc-acc-main-wrapper
+    .simplebar-track.simplebar-vertical
+      margin-right: 0px  
+@media only screen and (max-width: 768px)
+  .vc-main-wrapper, .vc-acc-main-wrapper
+    .simplebar-track.simplebar-vertical, .simplebar-track.simplebar-horizontal
+      display: none
+.idAccFilterWrapper
+  height: calc(100% - 120px)
+  //減掉header, footer
+  overflow-y: auto
+  //scroll-bar width
+  padding-right: 14px
+.vc-range-txt
+  font-size: $font_14px
+  padding: 0 1.5rem
+/* filter body */  
+.vc-filterwgt
+  margin: .25rem 0  
+.vc-filterwgt-header
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  opacity: 0.5
+  margin-top: .5rem
+  h4
+    font-size: $font_16px
+    color: $c_txt_yellow
+    margin-bottom: 0 
+    span
+      margin-left: .25rem
+.vc-filterwgt-body
+  font-size: $font_14px
+  margin-top: .25rem
+  .vc-filterwgt-list
+    li
+      padding-left: $font_14px
+      &:before
+        content: '-'
+        color: $c_white
+        margin-right: .25rem    
+.vc-filter-onoff, .vc-filterwgt-body
+  display: none
+.vc-filterwgt.active
+  .vc-filterwgt-header
+    opacity: 1
+  .vc-filter-onoff, .vc-filterwgt-body
+    display: block
+.vc-filter-onoff
+  margin-left: auto
+  min-width: 36px
+  a
+    display: inline-block
+    width: 16px
+    margin: 0 2px
+.vc-on, .vc-off
+  font-size: 0
+  &:before
+    font-family: FontAwesome
+    font-size: $font_14px
+    width: 14px
+    height: 14px
+    border: 0
+    content: "\f00c" //fa-check
+    color: $c_txt_yellow
+    opacity: 0.5
+.vc-off
+  &:before
+    content: "\f05e" //fa-ban
+.vc-on:hover, .vc-off:hover
+  &:before
+    color: $c_white
+    opacity: 1
+.vc-on.active, .vc-off.active
+  &:before
+    opacity: 1
+
+/* filter footer */     
+.vc-filter-footer
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 0
+  transition: .5s
+  & > *
+    display: none
+.vc-filter-footer.vc-mode-filteredit
+  height: auto
+  & > *
+    display: block
+
+
+/* sub nav */    
+.vc-acc-subnav-wrapper.vc-mode-sidehide
+  margin-left: 0  
+.vc-acc-subnav-wrapper
+  margin-top: 10px
+  margin-left: 10px
+  margin-bottom: 16px  
+  padding-left: 8px
+  .nav-item
+    padding: 0 .5rem
+    &:first-child
+      padding-left: 0        
+  .nav-link
+    color: $c_txt_navgray
+    padding-left: 0
+    padding-right: 0
+  .nav-link.active
+    color: $c_txt_purple
+    border-bottom: 2px solid $c_txt_purple  
+/* acc sub nav */    
+.vc-mobile-acc-subnav-toggle 
+  display: none 
+.vc-acc-subnav-list
+  display: block
+@media only screen and (max-width: 700px)
+  .vc-acc-subnav-wrapper  
+    margin-right: 0
+  .vc-acc-subnav-list
+    display: none
+  .vc-mobile-acc-subnav-toggle 
+    border: 1px solid $c_white_a25
+    background-color: $c_sidemenu_bg
+    box-shadow: $c_navlink_shadow
+    width: 100%
+    padding: .5rem .5rem .5rem .75rem
+    color: $c_txt_purple
+    display: flex
+    justify-content: space-between
+    align-items: center
+    cursor: pointer
+    &:after
+      display: inline-block
+      width: 20px
+      font-family: FontAwesome
+      font-size: inherit
+      content: "\f107" //.fa-angle-down
+      color: $c_white  
+  .vc-acc-subnav
+    display: flex
+    justify-content: flex-start 
+    flex-wrap: wrap
+    padding-left: .25rem
+    padding-top: .25rem
+    .nav-item
+      width: 50%
+      font-size: $font_16px
+      &:first-child
+        padding-left: 0.5rem
+      .nav-link
+        display: inline-block
+        margin-top: .25rem
+        margin-bottom: .25rem
+.vc-wgt-nav
+  margin-bottom: 1rem
+  .nav-link
+    color: $c_txt_navgray
+    padding-left: 0
+    padding-right: 0
+    margin: 0 .5rem
+  .nav-link.active
+    color: $c_txt_yellow
+    border-bottom: 2px solid $c_txt_yellow
+.vc-wgt-body-acc
+  border: 1px solid $c_wgt_border
+  padding: .75rem 1rem .75rem 1rem
+  background-color: $c_wgtacc_bg
+  height: calc(100% - 50px)
+@media only screen and  (max-width: 576px)
+  .vc-acc-subnav-wrapper
+    padding-left: 1rem
+    padding-right: 1rem
+  .vc-wgt-body-acc
+    padding-left: .5rem
+    padding-right: .5rem
+  .vc-wgt-chartmenu
+    margin-right: .5rem
+
+/* ============================================================ */
+/*                      amchart and table                       */
+/* ============================================================ */
+/* chart menu */
+.vc-wgt-chartmenu  
+  float: right
+  display: inline-block
+  width: 30px
+  margin-top: -3rem
+  margin-bottom: .5rem
+  &:after
+    content: ''
+    clear: both
+  .dropdown-toggle
+    font-size: 0
+    display: inline-block
+    margin-left: auto
+    width: 30px
+    // height: 30px
+    &:after
+      margin-left: auto
+      font-family: FontAwesome
+      font-size: $font_15px
+      content: "\f142" //.fa-ellipsis-v
+      display: block
+      width: 30px
+      height: 30px
+      border-radius: 15px
+      line-height: 30px
+      text-align: center
+      border: 1px solid $c_white_a50
+      color: $c_white_a50
+  .dropdown-menu
+    font-size: $font_14px
+    width: 80px
+    min-width: auto  
+    transition: none
+  .dropdown-menu.show
+    padding-top: 0
+    padding-bottom: 0
+    transition: none
+.vc-wgt-chartmenu:hover
+  .dropdown-toggle
+    &:after
+      border: 1px solid $c_white
+      color: $c_white_a50
+      background-color: $c_chartbtn_bg_hover
+/* rwd table menu */
+.vc-mobile-only-thead-menu
+  width: 80px
+  margin: 0 auto
+  .dropdown-toggle
+    display: flex
+    justify-content: center
+    &:after           
+      color: inherit
+      display: none
+  .dropdown-menu
+    margin-top: .5rem
+    font-size: $font_14px
+    width: 100%
+    min-width: auto  
+    .dropdown-item
+      padding-left: 0
+      padding-right: 0
+      text-align: center
+
+.vc-amchart-div
+  width: 100%
+  height: $amchart_h
+  font-size: $font_12px
+  display: block
+@media only screen and  (max-width: 576px)
+  .vc-amchart-div
+    height: 40vh 
+  #idChartAccAppThreat_byTime, #idChartAccAppSession_byTime, #idChartAccRuleUrl_byTime,
+  #idChartAccBlockedRuleUrl_byTime, #idChartAccUrl_byTime, 
+    height: 60vh  
+.vc-amchart-div.hide
+  display: none  
+.vc-amchart-div.TEST
+  background: $c_white_a50
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: $font_16px
+  color: $c_black 
+.vc-amchart-map
+  background: $c_white_a05
+/* table */  
+.vc-wgt-datatable-scroll  
+  overflow-x: auto
+.vc-table-min400
+  min-width: 400px 
+.vc-table-min800
+  min-width: 800px 
+.vc-table-min700
+  min-width: 700px      
+.vc-data-table
+  margin-top: 1rem
+  tr:nth-child(even)
+    background-color: $c_table_even_bg
+    // background-color: $c_white_a10
+  th, thead th, td
+    padding: 5px .5rem
+    border: 0
+    font-weight: normal
+    font-size: $font_14px
+    vertical-align: middle
+  thead th
+    border-top: 1px solid $c_white_a50
+    border-bottom: 1px solid $c_white_a50
+    padding-top: .5rem
+    padding-bottom: .5rem
+    text-align: center
+  .vc-col-active
+    color: $c_txt_yellow  
+    .vc-value
+      color: inherit
+  .vc-value
+    font-size: $font_12px
+    margin: 0    
+  .vc-col-perc   
+    .vc-perc-bg, .vc-perc-bar
+      height: 8px
+    .vc-perc-bg
+      margin-top: 2px
+      background-color: #666
+    .vc-perc-bar
+      background: $c_chart_fg1
+
+/* table layout */ 
+.vic-flag
+  margin-right: 5px
+  border: 1px solid $c_white_a50        
+.vc-col-byte, .vc-col-session, .vc-col-threat
+  min-width: 60px
+.idTableAccSrcIpByte, .idTableAccSrcIpSession, .idTableAccSrcRegByte, .idTableAccSrcRegSession,
+.idTableAccDestIpByte, .idTableAccDestIpSession, .idTableAccDestRegByte, .idTableAccDestRegSession
+  .vc-col-addr
+    width: 40%  
+  .vc-col-byte, .vc-col-session, .vc-col-threat
+    width: 20%
+    text-align: center     
+.idTableAccSrcIpThreat, .idTableAccSrcRegThreat, .idTableAccDestIpThreat, .idTableAccDestRegThreat
+  .vc-col-addr
+    width: 50%  
+  .vc-col-threat
+    width: 50%
+    text-align: center
+.idTableAccAppByte, .idTableAccAppSession, .idTableAccAppThreat
+  .vc-col-app
+    width: 23%
+  .vc-col-risk
+    width: 7%    
+  .vc-col-byte, .vc-col-session, .vc-col-threat
+    width: 10%
+    text-align: center
+  .vc-col-subcat, .vc-col-cat
+    width: 20%    
+    text-align: center
+.idTableAccBlockedAppThreat
+  .vc-col-app
+    width: 23%
+  .vc-col-risk
+    width: 7% 
+  .vc-col-threat
+    width: 30% 
+  .vc-col-subcat, .vc-col-cat
+    width: 20%    
+    text-align: center
+
+.idTableAccAppByte, .idTableAccAppSession, .idTableAccAppThreat, 
+.idTableAccBlockedAppThreat   
+  td.vc-col-app 
+    padding-top: .5rem
+    padding-right: 0
+    max-width: 250px
+  td.vc-col-risk
+    padding-top: .5rem
+    padding-left: 0
+    min-width: 46px
+
+.vc-riskleft, .vc-riskright
+  display: inline-block
+  height: 1.5rem
+  width: 100%
+  line-height: 1.5rem
+  white-space: nowrap
+  overflow: hidden 
+.vc-riskleft
+  border-top-left-radius: 0.75rem
+  border-bottom-left-radius: 0.75rem
+  padding-left: 10px
+.vc-riskright
+  border-top-right-radius: 0.75rem
+  border-bottom-right-radius: 0.75rem
+  font-size: 20px
+  font-family: "Trebuchet MS", Helvetica, sans-serif
+  font-weight: bold
+  text-align: center
+.risk01  
+  background-color: #7B9438 //green
+.risk02
+  background-color: #4D798F //blue
+.risk03
+  background-color: #A28A0D //yellow
+.risk04
+  background-color: #AC5320 //orange
+.risk05
+  background-color: #96323C //red 
+
+
+.idTableAccUrl
+  .vc-col-url, .vc-col-cat
+    width: 35%
+  .vc-col-amount
+    width: 30%
+  thead
+    th.vc-col-url, th.vc-col-cat  
+      text-align: left  
+.idTableAccThreat
+  .vc-col-id, .vc-col-level, .vc-col-amount
+    width: 10%
+    text-align: center
+  .vc-col-cat, .vc-col-type
+    width: 20%
+    text-align: left  
+  .vc-col-threat
+    width: 30%  
+  thead
+    th.vc-col-threat
+      text-align: left  
+.idTableAccRuleByte, .idTableAccRuleSession
+  td, th, thead th
+    // font-size: $font_12px
+    padding-left: .2rem
+    padding-right: .2rem
+  .vc-col-byte, .vc-col-session, .vc-col-threat, .vc-col-content, .vc-col-url, .vc-col-app
+    width: 13%
+  .vc-col-rule
+    width: 22%  
+  
+.idTableAccRuleThreat, .idTableAccRuleContent, .idTableAccRuleUrl, 
+.idTableAccBlockedRuleThreat, .idTableAccBlockedRuleContent, .idTableAccBlockedRuleUrl,  
+  .vc-col-rule
+    width: 50%  
+  .vc-col-threat, thead th.vc-col-threat,
+  .vc-col-content, thead th.vc-col-content,
+  .vc-col-url, thead th.vc-col-url,
+    width: 50%
+    text-align: center
+
+
+/* RWD TABLE!! */
+.vc-col-mobile-only, .vc-mobile-only-info-parent, .vc-mobile-only-option, .vc-mobile-only-option-parent
+  display: none
+.vc-col-pc-only
+  display: table-cell  
+.vc-mobile-only-tgicon
+  display: none
+@media only screen and  (max-width: 700px)
+  .vc-mobile-only-option-parent
+    display: table-row       
+  .vc-mobile-only-option
+    display: table-cell
+  .vc-col-pc-only
+    display: none
+  .vc-col-dynamic
+    color: $c_txt_yellow  
+    .vc-value
+      color: inherit
+  .vc-mobile-only-tgicon
+    display: inline-block
+    &:after
+      display: inline-block
+      content: ''
+      width: 16px
+      height: 16px
+      margin-right: 4px
+      margin-bottom: 4px
+      background: url(../img/acc-infobox-tg.svg) center center no-repeat
+      background-size: 16px 16px
+      vertical-align: middle
+  .jsTableMobileInfoToggle
+    cursor: pointer      
+  .vc-data-table tr:nth-child(even)
+    background-color: transparent    
+  tr.vc-mobile-only-info-parent   
+    display: table-row
+    background-color: transparent
+    td.vc-mobile-only-info
+      display: table-cell
+      padding-left: 0
+      padding-right: 0
+  .vc-info-box-wrapper
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    background: #163652
+    padding: .25rem .5rem .25rem .5rem
+    position: relative
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      left: 3px
+      top: -10px
+      width: 0
+      height: 0
+      border-left: 10px solid transparent
+      border-right: 10px solid transparent
+      border-bottom: 15px solid #163652     
+    .vc-info-box-title
+      padding: .5rem 0
+      width: 100%
+      border-bottom: 1px solid $c_sidemenu_bg
+      margin-bottom: .5rem
+      font-size: $font_12px
+    .vc-info-box.vc-hide
+      display: none  
+    .vc-info-box
+      padding: .25rem 0
+      & > p.vc-thead
+        font-size: $font_14px
+        // margin: .25rem 0
+        margin: 0
+      .vc-col-onlytxt 
+        height: 30px
+        display: flex
+        align-items: center
+        p.vc-value
+          font-size: $font_12px
+      .vc-col-perc
+        .vc-perc-bg
+          background-color: #666666
+  /* slide toggle */          
+  tr.vc-mobile-only-info-parent
+    opacity: 1
+    transition: .5s ease-in
+    td.vc-mobile-only-info
+      max-height: none
+      .vc-info-box-wrapper
+        max-height: none
+        &:before
+          opacity: 1
+        .vc-info-box  
+          opacity: 1              
+  tr.vc-mobile-only-info-parent.vc-hide
+    // display: none
+    opacity: 0
+    td.vc-mobile-only-info
+      max-height: 0
+      padding: 0
+      .vc-info-box-wrapper
+        max-height: 0
+        padding: 0
+        overflow: hidden
+        &:before
+          opacity: 0
+        .vc-info-box  
+          opacity: 0 
+  /* Style A: 左邊欄位純文字、右邊有bar的欄位*/          
+  .vc-info-box-left-wrapper 
+    width: 72%
+    .vc-info-box
+      & > p.vc-thead
+        text-align: left
+  .vc-info-box-right-wrapper 
+    width: 28%  
+    .vc-info-box
+      & > p.vc-thead
+        text-align: center
+
+  .idTableAccBlockedAppThreat, .idTableAccRuleByte, .idTableAccRuleSession, 
+  .idTableAccThreat 
+    .vc-info-box-100-wrapper
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      .vc-info-box
+        width: 50%
+  .idTableAccRuleByte, .idTableAccRuleSession 
+    .vc-info-box-100-wrapper
+      .vc-info-box
+        padding-left: 2% 
+        padding-right: 2%
+@media only screen and  (max-width: 700px)
+  .idTableAccAppByte, .idTableAccAppSession, .idTableAccAppThreat, 
+  .idTableAccBlockedAppThreat   
+    .vc-col-app 
+      width: 65%
+      padding-left: 0
+      .vc-riskleft
+        padding-left: 5px
+    .vc-col-risk
+      width: 5%
+      padding-left: 0
+      padding-right: 0
+    .vc-col-dynamic
+      width: 30%  
+  .idTableAccRuleByte, .idTableAccRuleSession
+    .vc-col-rule
+      width: 50%
+    .vc-col-dynamic
+      width: 50%
+      padding-left: 2% 
+      padding-right: 2%
+  .idTableAccThreat
+    .vc-col-threat   
+      width: 50%
+    .vc-col-dynamic
+      width: 50% 
+
+@media only screen and  (max-width: 576px)
+  .idTableAccAppByte, .idTableAccAppSession, .idTableAccAppThreat, 
+  .idTableAccBlockedAppThreat   
+    td.vc-col-app 
+      max-width: 160px 
+  .idTableAccAppByte, .idTableAccAppSession, .idTableAccAppThreat,
+    .vc-info-box-left-wrapper 
+      width: 71%
+    .vc-info-box-right-wrapper
+      width: 29%
+
+@media only screen and  (max-width: 420px)
+  .idTableAccAppByte, .idTableAccAppSession, .idTableAccAppThreat, 
+  .idTableAccBlockedAppThreat   
+    td.vc-col-app
+      max-width: 120px 
+
+@media only screen and  (max-width: 350px)
+  .idTableAccAppByte, .idTableAccAppSession, .idTableAccAppThreat, 
+  .idTableAccBlockedAppThreat   
+    td.vc-col-app
+      max-width: 100px 
+  .idTableAccAppByte, .idTableAccAppSession, .idTableAccAppThreat,
+    .vc-info-box-left-wrapper 
+      width: 64%
+    .vc-info-box-right-wrapper
+      width: 36%  
+
+
+/* ============================================================ */
+/*                      select2                                 */
+/* ============================================================ */
+.vc-mode-filterview  
+  .vc-filter-select2, .select2
+    display: none
+  .vc-filterwgt-list
+    display: block
+  input.vc-input
+    display: none
+.vc-mode-filteredit
+  .vc-filterwgt-list
+    display: none
+  .vc-filter-select2, .select2, .vc-input
+    display: block    
+  .vc-input-wrapper    
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    margin-top: 2px
+  .vc-input
+    width: calc(100% - 22px)
+  .vc-input-add
+    margin-bottom: 8px
+    line-height: 0.875rem
+  //   color:
+  //   &:after
+  //     display: block
+  //     font-family: FontAwesome
+  //     content: "\f067" //fa-plus
+  //     font-size: $font_14px
+  //     line-height: 28px
+  //     color: $c_white
+  .select2
+    margin-top: .25rem
+    margin-bottom: .25rem
+  .select2-container--default .select2-selection--multiple
+    background-color: $c_sidemenu_bg
+    border: 0px
+  .select2-container--default .select2-selection--multiple .select2-selection__choice, 
+  .select2-selection__choice
+    width: 100%
+    display: block
+    background-color: $c_sidemenu_bg
+    border: 1px solid $c_white_a50
+    height: 2rem
+    line-height: 2rem
+    border-radius: 1rem
+    padding-left: .5rem
+  .select2-selection__choice
+    float: left
+    margin-right: 5px
+    margin-top: 5px
+    padding: 0 5px
+  .select2-container .select2-selection--multiple .select2-selection__rendered,
+  .select2-selection__rendered
+    display: flex
+    flex-direction: column  
+    padding-left: 0
+    padding-right: 0
+  .select2-container .select2-search--inline
+    float: none
+    width: 100%
+    height: 2rem
+    display: block  
+    border-bottom: 1px solid $c_white_a50
+    padding-left: 5px
+    padding-right: 5px
+  .select2-container--default .select2-search--inline .select2-search__field
+    color: $c_white  
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
+  .select2-selection__choice__remove
+    float: right  
+    font-size: $font_14px
+    width: $font_14px
+    height: $font_14px
+    // border: 1px solid $c_txt_yellow
+    border-radius: $font_14px
+    // color: $c_txt_yellow
+    color: $c_sidemenu_bg
+    background-color: $c_white_a75
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 8px
+  .select2-selection__choice__remove
+    cursor: pointer
+    margin-right: 2px
+    font-weight: bold
+  .select2-container--open .select2-selection__rendered
+    padding: 0
+  .select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple
+    border-left: 1px solid $c_white_a50
+    border-right: 1px solid $c_white_a50
+/* not under .vc-mode-filteredit */    
+.select2-container--default .select2-results__option[aria-selected=true]
+  background-color: $c_sidemenu_bg
+  color: $c_white_a50
+.select2-dropdown
+  background-color: $c_sidemenu_bg
+
+
+.TESTBDR
+  border: 0px dashed $c_white_a25
+.TEST-H
+  min-height: 30rem
+.amcharts-amexport-menu
+  width: auto
+.amcharts-amexport-left .amcharts-amexport-item
+  margin: 0!important  
+.amcharts-amexport-item.amcharts-amexport-item-level-0
+  width: 30px!important
+  height: 30px!important
+  border-radius: 15px!important
+  background: $c_chartbtn_bg!important
+  border: 1px solid $c_white_a50
+  margin: 0
+  opacity: 1!important
+  &:hover
+    // color: $c_white_a50!important
+    background: $c_chartbtn_bg_hover!important
+  & > a
+    display: block
+    width: 100%
+    height: 100%
+    font-size: 0
+    display: flex
+    align-items: center
+    justify-self: center
+    &:after
+      font-family: FontAwesome
+      font-size: $font_14px
+      // line-height: 30px
+      margin: 0 auto
+      content: "\f0c9" //.fa-bars
+      border: 0
+      color: $c_white_a50
+
+.amcharts-amexport-item
+  font-size: $font_14px
+  width: 100px
+  color: $c_black!important
+  background-color: $c_white_a90!important
+  border-radius: 0!important
+
+.amcharts-amexport-item:hover, .amcharts-amexport-item:active
+  color: $c_white!important
+  background-color: $c_hover_purple_2!important
+.amcharts-amexport-item:hover > .amcharts-amexport-menu,
+.amcharts-amexport-item.active > .amcharts-amexport-menu
+  left: 2px!important  
+
+/* ============================================================ */
+/*           account management                                 */
+/* ============================================================ */
+.vc-mng-wgt-wrapper, .vc-mng-edit-wgt-wrapper
+  .vc-wgt-body
+    overflow-x: hidden
+    overflow-y: hidden
+    max-height: none
+    .row
+      width: calc(100% + 30px)
+.vc-mng-wgt-wrapper
+  .vc-wgt-body
+    border: 0 
+.vc-mng-edit-wgt-wrapper
+  .vc-wgt-body
+    padding: 1rem 1.5rem      
+@media only screen and  (max-width: 576px)      
+  .vc-mng-wgt-wrapper, .vc-mng-edit-wgt-wrapper      
+    .vc-wgt
+      padding-left: 1rem
+      padding-right: 1rem
+  .vc-mng-edit-wgt-wrapper
+    .vc-wgt-body
+      border-left: 0
+      border-right: 0
+      padding: 1rem 0rem
+@media only screen and  (max-width: 350px)
+  .vc-mng-wgt-wrapper, .vc-mng-edit-wgt-wrapper
+    .vc-wgt
+      padding-left: .1rem
+      padding-right: .1rem
+
+.vc-datatb-length
+  width: 6rem 
+.vc-datatb-length.vc-roundbtn  
+  padding-left: 0.25rem   
+.vc-datatb-length-wrapper, .vc-datatb-search-wrapper
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  & > *
+    margin: 0 5px
+.vc-datatb-search-wrapper
+  justify-content: flex-end
+  input.vc-input
+    width: 50%
+    
+        
+.idTableMngUser, .idTableDevice
+  border: 1px solid $c_white_a50
+  tr      
+    border: 1px dashed $c_white_a50
+  .vc-mobile-only-option
+    text-align: right
+.idTableMngUser
+  .vc-col-name, .vc-col-time-init, .vc-col-time-update, 
+    width: 20%
+    text-align: center
+  .vc-col-status
+    width: 10%
+    min-width: 2rem
+    text-align: center
+  .vc-col-opt
+    width: 30%
+    text-align: center
+    .btn
+      width: 80px
+      margin-top: 1px
+      margin-bottom: 1px
+
+.idTableDevice
+  .vc-col-name, 
+    width: 25%
+    text-align: center
+  .vc-col-ip, 
+    width: 25%
+    text-align: center
+  .vc-col-dev,
+    width: 20% 
+    text-align: center
+  .vc-col-opt
+    width: 30%
+    text-align: center
+.vc-datatb-pager
+  display: flex
+  justify-content: flex-end
+  .page-item.disabled .page-link
+    background-color: transparent
+    // border-color: $c_white_a50
+    border: none
+    .fa
+      color: $c_white
+  .page-item.active .page-link, .page-link:hover
+    color: $c_white
+    background-color: $c_hover_purple_2
+    // border-color: $c_hover_purple_2
+    border: none
+    .fa
+      color: $c_white
+  .page-link
+    background-color: transparent
+    color: $c_txt_purple
+    // border-color: $c_white_a50
+    border: none
+    .fa
+      color: $c_txt_purple
+  .page-link:focus
+    box-shadow: none
+  .page-item:last-child .page-link, .page-item:first-child .page-link
+    border-radius: 0
+
+@media only screen and  (max-width: 767px)
+  .vc-datatb-search-wrapper
+    justify-content: flex-start
+    margin-top: .5rem
+    input.vc-input
+      width: calc(100% - 4rem)
+  .idTableMngUser,  .idTableDevice
+    tr
+      border-bottom: none
+    tr.vc-mobile-only-option-parent
+      border-top: none
+  .idTableMngUser
+    thead th, td
+      padding-left: .3rem
+      padding-right: .3rem
+    .vc-col-name, .vc-col-time-init, .vc-col-time-update,
+      text-align: left 
+  .idTableDevice
+    .vc-col-name, 
+      width: 30%
+      text-align: left
+    .vc-col-dev
+      width: 30%
+      text-align: left
+    .vc-col-ip
+      width: 40%
+      text-align: left
+    .vc-col-opt
+      width: 100%
+      text-align: right
+  // .idTableDevice
+  //   .vc-col-name, 
+  //     width: 25%
+  //     text-align: center
+  //   .vc-col-ip, 
+  //     width: 25%
+  //     text-align: center
+  //   .vc-col-dev,
+  //     width: 20% 
+  //     text-align: center
+  //   .vc-col-opt
+  //     width: 30%
+  //     text-align: center     
+  .vc-datatb-pager-note
+    text-align: center
+  .vc-datatb-pager
+    margin-top: 1rem
+    justify-content: center
+@media only screen and  (max-width: 768px)
+  .vc-edit-btn-wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: center
+    .btn
+      width: 48%
+      margin: 0 0 6px 0
+/* ============================================================ */
+/*           loading layer                                     */
+/* ============================================================ */
+.vc-loading-mask.hide
+  display: none
+.vc-loading-mask, .vc-acc-wrapper.vc-mode-sidehide .vc-loading-mask
+  position: absolute
+  z-index: 2
+  left: 0
+  right: 0
+  background-color: rgba(0, 0, 0, 0.75)
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-left: 0
+  &.hide
+    display: none
+.svgLoading.animated
+  border: 0px solid white
+  text-align: center
+  stroke: $c_hover_purple_1
+  stroke-dasharray: 200
+  stroke-width: 2
+  fill: transparent
+  animation: lineAndFill 2400ms ease-out infinite
+  
+@keyframes lineAndFill
+  0%
+    stroke-dashoffset: 220
+  25%
+    fill: transparent
+  50%
+    transform: translate(0, 15px)
+  60%
+    stroke-dashoffset: 0
+    fill: $c_hover_purple_1
+  100%
+    fill: $c_hover_purple_1
+.vc-acc-wrapper
+  .vc-loading-mask
+    margin-left: 280px
+    width: calc(100% - 280px)
+
+  

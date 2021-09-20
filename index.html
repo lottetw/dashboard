@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>儀表板</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	 <!--Facebook 分享時使用資訊  -->
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:url" content="" /> 
+	<meta property="og:image" content="" />
+	<meta property="og:type" content="website""/>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/vendors/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/vendors/vendors.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- favicon -->
+	<link rel="shortcut icon" size="16x16" href="favicon.ico">
+	<link rel="apple-touch-icon" sizes="192x192" href="favicon192.png">
+</head>
+<body>
+  <header>
+    <!-- load inc/nav.html -->
+  </header> 
+    <!-- TEST-LOADING-BTN 測試按鈕 可以拿掉-->
+    <a class="TEST-LOADING-BTN" onclick="document.getElementById('idIdxLoadingMask').classList.toggle('hide');"
+      style="position: fixed; z-index: 10; top: 0; right:0; font-size: 8px; color: yellow; text-decoration: underline; cursor:pointer;">
+      loading測試
+    </a>
+    <div class="vc-loading-mask hide" id="idIdxLoadingMask" onclick="this.classList.add('hide');">
+      <svg class="svgLoading animated" xmlns="http://www.w3.org/2000/svg" style="margin-top: -100px;" width="240"
+        height="80" viewBox="0 0 240 80">
+        <text x="0" y="55" font-family="Arial" font-size="50" font-weight="bold">
+          Loading...
+        </text>
+      </svg>
+    </div>
+  <div class="vc-main-wrapper" data-simplebar>
+    <div class="container ">
+      <!-- 更新toolbar -->
+      <div class="row"> 
+        <div class="vc-brd-update ">
+          <button class="btn vc-roundbtn"><i class="fa fa-repeat"></i>更新</button>
+          <div class="vc-updatetime ml-2 vc-roundbtn">
+              <img src="assets/img/brd-i-clock@2x.png" alt="clockicon">
+              <select class="custom-select ">
+                <option value="01" selected>5分鐘</option>
+                <option value="02">x分鐘</option>
+                <option value="03">y分鐘</option>
+                <option value="04">z分鐘</option>
+              </select>
+          </div>
+        </div>
+      </div>
+      <!-- widgets -->
+      <div class="row vc-brd-wgt-wrapper">
+        <div class="col12 col-lg-7 ">
+          <!-- 通知 -->
+          <div class="vc-wgt mb-3">
+            <div class="vc-wgt-header"><h2>通知</h2></div>
+            <div class="vc-wgt-body vc-nobdr">
+              <ul class="vc-notice-ul">
+                <li class="vc-notice-li">
+                  <div class="vc-nt-content">
+                    <img src="assets/img/brd-i-guard@2x.png" alt="防止入侵攻擊">
+                    <p class="vc-nt-title">防止入侵功擊</p>
+                    <p class="vc-nt-count"><span class="vc-counter">5</span></p>
+                  </div>
+                </li>
+                <li class="vc-notice-li ">
+                  <div class="vc-nt-content">
+                    <img src="assets/img/brd-i-virus@2x.png" alt="隔絕網路病毒">
+                    <p class="vc-nt-title">隔絕網路病毒</p>
+                    <p class="vc-nt-count"><span class="vc-counter">12</span></p>
+                  </div>
+                </li>
+                <li class="vc-notice-li ">
+                  <div class="vc-nt-content">
+                    <img src="assets/img/brd-i-attack@2x.png" alt="阻擋惡意連線">
+                    <p class="vc-nt-title">阻擋惡意連線</p>
+                    <p class="vc-nt-count"><span class="vc-counter">9999</span><sup>+</sup></p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- URL顯著排名 -->
+          <div class="vc-wgt mb-3">
+            <div class="vc-wgt-header d-flex justify-content-between align-items-center">
+              <h2>URL顯著排名</h2><a href="#" class="btn vc-roundbtn vc-small vc-icon-back">更多<i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="vc-wgt-body">
+              <ul class="vc-urltop-ul">
+                <li class="vc-urltop-li ">
+                  <div class="vc-col-donut ">
+                    <div class="vc-svg-donut">
+                      <svg width="100%" height="100%" viewBox="0 0 40 40">
+                        <!-- 在第一個svg裡面定義漸層色，後面可沿用 -->
+                        <defs>
+                          <linearGradient id="idDonutGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#43C7FF" />
+                            <stop offset="100%" stop-color="#8271FF" />
+                          </linearGradient>
+                        </defs>
+                        <circle class="vc-donut-hole" cx="20" cy="20" r="16" fill=""></circle>
+                        <circle class="vc-donut-ring" cx="20" cy="20" r="16" fill="" ></circle>
+                        <circle class="vc-donut-segment vc-donut-run" cx="20" cy="20" r="16" fill="transparent" stroke="url(#idDonutGradient)" 
+                        style="stroke-dasharray: 70 30"></circle>
+                      </svg>
+                      <div class="vc-donut-text">
+                        <p class="vc-label" id="">次數</p>
+                        <p class="vc-label-data" id=""><span class="vc-counter">9999</span><sup>+</sup></p>
+                        <p class="vc-label-percent" id="">70%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="vc-col-info ">
+                    <div class="vc-row-star"><span class="vc-star vc-star1">1</span></div>
+                    <a href="https://www.youtube.com" title="https://www.youtube.com/" class="vc-urllink">https://www.youtube.com/</a>
+                    <p class="vc-value vc-withbullet" title="Reduce productivity">Reduce productivity</p>
+                  </div>
+                </li>
+                <li class="vc-urltop-li ">
+                  <div class="vc-col-donut ">
+                    <div class="vc-svg-donut">
+                      <svg width="100%" height="100%" viewBox="0 0 40 40">
+                        <circle class="vc-donut-hole" cx="20" cy="20" r="16" fill=""></circle>
+                        <circle class="vc-donut-ring" cx="20" cy="20" r="16" fill="" ></circle>
+                        <circle class="vc-donut-segment vc-donut-run" cx="20" cy="20" r="16" fill="transparent" stroke="url(#idDonutGradient)" 
+                        style="stroke-dasharray: 50 50"></circle>
+                      </svg>
+                      <div class="vc-donut-text">
+                        <p class="vc-label" id="">次數</p>
+                        <p class="vc-label-data" id=""><span class="vc-counter">7734</span></p>
+                        <p class="vc-label-percent" id="">50%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="vc-col-info ">
+                    <div class="vc-row-star"><span class="vc-star vc-star2">2</span></div>
+                    <a href="http://www.jq22.com/sear" title="http://www.jq22.com/sear" class="vc-urllink">http://www.jq22.com/sear</a>
+                    <p class="vc-value vc-withbullet" title="High risk">High risk</p>
+                  </div>                
+                </li>
+                <li class="vc-urltop-li ">
+                  <div class="vc-col-donut ">
+                    <div class="vc-svg-donut">
+                      <svg width="100%" height="100%" viewBox="0 0 40 40">
+                        <circle class="vc-donut-hole" cx="20" cy="20" r="16" fill=""></circle>
+                        <circle class="vc-donut-ring" cx="20" cy="20" r="16" fill="" ></circle>
+                        <circle class="vc-donut-segment vc-donut-run" cx="20" cy="20" r="16" fill="transparent" stroke="url(#idDonutGradient)" 
+                        style="stroke-dasharray: 40 60"></circle>
+                      </svg>
+                      <div class="vc-donut-text">
+                        <p class="vc-label" id="">次數</p>
+                        <p class="vc-label-data" id=""><span class="vc-counter">3321</span></p>
+                        <p class="vc-label-percent" id="">40%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="vc-col-info ">
+                    <div class="vc-row-star"><span class="vc-star vc-star3">3</span></div>
+                    <a href="https://www.youtube.com/w12312312312.1231.html" title="https://www.youtube.com/w12312312312.1231.html" class="vc-urllink">https://www.youtube.com/w12312312312.1231.html</a>
+                    <p class="vc-value vc-withbullet" title="Violation of customs">Violation of customs</p>
+                  </div>
+                </li>
+                <li class="vc-urltop-li ">
+                  <div class="vc-col-donut ">
+                    <div class="vc-svg-donut">
+                      <svg width="100%" height="100%" viewBox="0 0 40 40">
+                        <circle class="vc-donut-hole" cx="20" cy="20" r="16" fill=""></circle>
+                        <circle class="vc-donut-ring" cx="20" cy="20" r="16" fill="" ></circle>
+                        <circle class="vc-donut-segment vc-donut-run" cx="20" cy="20" r="16" fill="transparent" stroke="url(#idDonutGradient)" 
+                        style="stroke-dasharray: 10 90"></circle>
+                      </svg>
+                      <div class="vc-donut-text">
+                        <p class="vc-label" id="">次數</p>
+                        <p class="vc-label-data" id=""><span class="vc-counter">578</span></p>
+                        <p class="vc-label-percent" id="">10%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="vc-col-info ">
+                    <div class="vc-row-star"><span class="vc-star">4</span></div>
+                    <a href="http://www.abc123.net/asdfasfd/sear=?ZXdfsdfaasdfxnkjhnilkml,.kmkjhbb" 
+                    title="http://www.abc123.net/asdfasfd/sear=?ZXdfsdfaasdfxnkjhnilkml,.kmkjhbb" class="vc-urllink">http://www.abc123.net/asdfasfd/sear=?ZXdfsdfaasdfxnkjhnilkml,.kmkjhbb</a>
+                    <p class="vc-value vc-withbullet" title="Violation of customs test longojknlkmjl;kijj 12343.ajnbkjhbk">Violation of customs test longojknlkmjl;kijj 12343.ajnbkjhbk</p>
+                  </div>                
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 應用程式顯著排名 -->
+          <div class="vc-wgt mb-3">
+            <div class="vc-wgt-header d-flex justify-content-between align-items-center">
+              <h2>應用程式顯著排名</h2><a href="#" class="btn vc-roundbtn vc-small vc-icon-back">更多<i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="vc-wgt-body">
+              <ul class="vc-apptop-ul">
+                <li class="vc-apptop-li vc-apptop-header">
+                  <div class="vc-col-star "></div>
+                  <div class="vc-col-name "></div>
+                  <div class="vc-col-perc "> <p class="vc-title">工作階段</p> </div>
+                  <div class="vc-col-perc "> <p class="vc-title">位元組</p> </div>
+                </li>
+                <li class="vc-apptop-li">
+                  <div class="vc-col-star ">
+                    <span class="vc-star vc-star1">1</span>
+                  </div>
+                  <div class="vc-col-name ">
+                    <p class="vc-name" title="SSL">SSL</p> <p class="vc-value vc-withbullet" title="High risk">High risk</p>
+                  </div>
+                  <div class="vc-col-perc ">
+                    <span class="vc-perc-bg"><span class="vc-perc-bar vc-bar-run" style="width:90%;"></span></span> <p class="vc-value">128.9k</p>
+                  </div>
+                  <div class="vc-col-perc ">
+                    <span class="vc-perc-bg"><span class="vc-perc-bar vc-bar-run" style="width:90%;"></span></span> <p class="vc-value">257.7Gk</p>
+                  </div>
+                </li>
+                <li class="vc-apptop-li">
+                  <div class="vc-col-star ">
+                    <span class="vc-star vc-star2">2</span>
+                  </div>
+                  <div class="vc-col-name ">
+                    <p class="vc-name" title="unknown-tcp">unknown-tcp</p> <p class="vc-value vc-withbullet" title="Violation of customs">Violation of customs</p>
+                  </div>
+                  <div class="vc-col-perc ">
+                    <span class="vc-perc-bg"><span class="vc-perc-bar vc-bar-run" style="width:75%;"></span></span>
+                    <p class="vc-value">38.4k</p>
+                  </div>
+                  <div class="vc-col-perc ">
+                    <span class="vc-perc-bg"><span class="vc-perc-bar vc-bar-run" style="width:75%;"></span></span>
+                    <p class="vc-value">122.8G</p>
+                  </div>
+                </li>
+                <li class="vc-apptop-li">
+                  <div class="vc-col-star ">
+                    <span class="vc-star vc-star3">3</span>
+                  </div>
+                  <div class="vc-col-name ">
+                    <p class="vc-name" title="web-browsing">web-browsing</p> <p class="vc-value vc-withbullet" title="Reduce productivity">Reduce productivity</p>
+                  </div>
+                  <div class="vc-col-perc ">
+                    <span class="vc-perc-bg"><span class="vc-perc-bar vc-bar-run" style="width:55%;"></span></span>
+                    <p class="vc-value">32.4k</p>
+                  </div>
+                  <div class="vc-col-perc ">
+                    <span class="vc-perc-bg"><span class="vc-perc-bar vc-bar-run" style="width:55%;"></span></span>
+                    <p class="vc-value">66.4G</p>
+                  </div>
+                </li>
+                <li class="vc-apptop-li">
+                  <div class="vc-col-star ">
+                    <span class="vc-star vc-star4">4</span>
+                  </div>
+                  <div class="vc-col-name ">
+                    <p class="vc-name" title="ping testadfhshg 123sdzfdb 890ji3432">ping testadfhshg 123sdzfdb 890ji3432</p>
+                    <p class="vc-value vc-withbullet" title="Malicious URL testlong words 123.asdfadvcoijnmikjm,">Malicious URL testlong words 123.asdfadvcoijnmikjm,</p>
+                  </div>
+                  <div class="vc-col-perc ">
+                    <span class="vc-perc-bg"><span class="vc-perc-bar vc-bar-run" style="width:26%;"></span></span>
+                    <p class="vc-value">9.2k</p>
+                  </div>
+                  <div class="vc-col-perc ">
+                    <span class="vc-perc-bg"><span class="vc-perc-bar vc-bar-run" style="width:26%;"></span></span>
+                    <p class="vc-value">10.2G</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col12 col-lg-5 ">
+          <!-- 硬體設備即時狀態 -->
+          <div class="vc-wgt mb-3">
+            <div class="vc-wgt-header">
+              <h2>硬體設備即時狀態</h2>
+            </div>
+            <div class="vc-wgt-body " style='overflow: hidden;'>
+              <div class="vc-amchart-div" id="idChartDashbrdHardware" style="height:400px;margin: 10px 0;"></div>
+            </div>
+          </div>
+          <div class="vc-wgt mb-3">
+            <div class="vc-wgt-header">
+              <h2>工作階段</h2>
+            </div>
+            <div class="vc-wgt-body vc-wgt-body-session">
+              <div class="vc-icon"><img src="assets/img/brd-i-sess.svg" alt="工作階段icon"></div>
+              <div class="vc-txt">
+                <p class='vc-name'>工作階段</p>
+                <span class='vc-counter-decipoint'>9998.8</span>
+                <span class='vc-value'>sessions</span>
+              </div>
+            </div>
+            <div class="vc-wgt-body vc-wgt-body-session">
+              <div class="vc-icon"><img src="assets/img/brd-i-throu.svg" alt="吞吐量icon"></div>
+              <div class="vc-txt">
+                <p class='vc-name'>吞吐量</p>
+                <span class='vc-counter-decipoint'>132.2</span>
+                <span class='vc-value'>kbps</span>
+              </div>
+            </div>
+            <div class="vc-wgt-body vc-wgt-body-session">
+              <div class="vc-icon"><img src="assets/img/brd-i-speed.svg" alt="傳輪速率icon"></div>
+              <div class="vc-txt">
+                <p class='vc-name'>傳輸速率</p>
+                <span class='vc-counter-decipoint'>70.8</span>
+                <span class='vc-value'>pps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <footer class="vc-footer">
+          <p>  Company Name All Rights Reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+<div class="modal vc-modal vc-user-changepass-modal fade" id="idModalUserChangePass" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="">修改會員密碼</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body ">
+        <label>舊密碼</label>
+        <div class="form-group pass_show jsPassShow">
+          <input type="password" value="" class="form-control" placeholder="請輸入原始密碼">
+          <span class="jsPassIcon vc-passshow"></span>
+        </div>
+        <label>新密碼</label>
+        <div class="form-group pass_show jsPassShow">
+          <input type="password" value="" class="form-control" placeholder="6-50碼，至少包含OOXXZZ">
+          <span class="jsPassIcon vc-passshow"></span>
+        </div>
+        <label>請再輸入一次新密碼</label>
+        <div class="form-group pass_show jsPassShow">
+          <input type="password" value="" class="form-control" placeholder="">
+          <span class="jsPassIcon vc-passshow"></span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn vc-squarebtn vc-mid vc-btnNO" data-dismiss="modal">取消</button>
+        <button type="button" class="btn vc-squarebtn vc-mid vc-btnYES" data-dismiss="modal">確定更改</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/js/vendors/jquery-3.3.1.min.js"></script>
+<script src="assets/js/vendors/popper.min.js"></script>
+<script src="assets/js/vendors/bootstrap4.1.3.min.js"></script>
+<!-- daterangepicker -->
+<script src="assets/js/vendors/moment.min.js"></script>
+<script src="assets/js/vendors/daterangepicker.min.js"></script>
+<!-- select2 -->
+<script src="assets/js/vendors/select2.js"></script>
+<!-- simplebar -->
+<script src="assets/js/vendors/simplebar.min.js"></script>
+<!-- amchart -->
+<script src="//www.amcharts.com/lib/4/core.js"></script>
+<script src="//www.amcharts.com/lib/4/charts.js"></script>
+<script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="//www.amcharts.com/lib/4/themes/dark.js"></script>
+<script src="//www.amcharts.com/lib/4/maps.js"></script>
+<script src="//www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<!-- 個別js -->
+<script src="assets/js/index.js"></script>
+<script src="assets/js/brd_chart.js"></script>
+<script>
+  headerSetup("jsNavBrd");
+</script>
+</body>  
+</html>

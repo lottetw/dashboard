@@ -1,0 +1,10 @@
+[
+  {
+    "region": "192.168.0.0-192.168.255.255",
+    "value": 2
+  },
+  {
+    "region": "United States",
+    "value": 97
+  }
+]
